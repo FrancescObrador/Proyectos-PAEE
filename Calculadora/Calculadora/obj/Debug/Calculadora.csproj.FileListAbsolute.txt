@@ -1,0 +1,10 @@
+D:\Carpetas\repos\MasterUA\PAEE\Calculadora\Calculadora\bin\Debug\Calculadora.exe.config
+D:\Carpetas\repos\MasterUA\PAEE\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+D:\Carpetas\repos\MasterUA\PAEE\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+D:\Carpetas\repos\MasterUA\PAEE\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.AssemblyReference.cache
+D:\Carpetas\repos\MasterUA\PAEE\Calculadora\Calculadora\obj\Debug\Calculadora.principal.resources
+D:\Carpetas\repos\MasterUA\PAEE\Calculadora\Calculadora\obj\Debug\Calculadora.Properties.Resources.resources
+D:\Carpetas\repos\MasterUA\PAEE\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.GenerateResource.cache
+D:\Carpetas\repos\MasterUA\PAEE\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+D:\Carpetas\repos\MasterUA\PAEE\Calculadora\Calculadora\obj\Debug\Calculadora.exe
+D:\Carpetas\repos\MasterUA\PAEE\Calculadora\Calculadora\obj\Debug\Calculadora.pdb

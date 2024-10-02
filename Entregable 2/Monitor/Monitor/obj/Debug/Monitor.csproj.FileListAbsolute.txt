@@ -1,0 +1,10 @@
+D:\Carpetas\repos\MasterUA\PAEE\Monitor\Monitor\bin\Debug\Monitor.exe.config
+D:\Carpetas\repos\MasterUA\PAEE\Monitor\Monitor\bin\Debug\Monitor.exe
+D:\Carpetas\repos\MasterUA\PAEE\Monitor\Monitor\bin\Debug\Monitor.pdb
+D:\Carpetas\repos\MasterUA\PAEE\Monitor\Monitor\obj\Debug\Monitor.csproj.AssemblyReference.cache
+D:\Carpetas\repos\MasterUA\PAEE\Monitor\Monitor\obj\Debug\Monitor.Properties.Resources.resources
+D:\Carpetas\repos\MasterUA\PAEE\Monitor\Monitor\obj\Debug\Monitor.csproj.GenerateResource.cache
+D:\Carpetas\repos\MasterUA\PAEE\Monitor\Monitor\obj\Debug\Monitor.csproj.CoreCompileInputs.cache
+D:\Carpetas\repos\MasterUA\PAEE\Monitor\Monitor\obj\Debug\Monitor.exe
+D:\Carpetas\repos\MasterUA\PAEE\Monitor\Monitor\obj\Debug\Monitor.pdb
+D:\Carpetas\repos\MasterUA\PAEE\Monitor\Monitor\obj\Debug\Monitor.Monitor.resources
