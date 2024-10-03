@@ -6,7 +6,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Monitor
@@ -48,7 +47,7 @@ namespace Monitor
             }
             else
             {
-                timer1.Interval = 10000;
+                timer1.Interval = 1000;
                 timer1.Start();
                 buttonActualizar.Text = "Parar";
             }
@@ -56,7 +55,7 @@ namespace Monitor
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Actualizar();
+            Actualizar();
         }
     }
 }

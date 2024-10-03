@@ -15,6 +15,7 @@ namespace Calculadora
         enum Operations { Add, Sub, Mult, Div, Pow, Root };
         private decimal operator1 = 0, operator2 = 0;
         private Operations operation;
+        private char operationChar = '+';
         private decimal result;
 
         public principal()
@@ -32,26 +33,28 @@ namespace Calculadora
 
         private void AddNumber(string num)
         {
-            string txt;
-
-            if (lblDisplay.Text.EndsWith(",0"))
+            if (num == "," && lblDisplay.Text.Contains(","))
             {
-                txt = lblDisplay.Text.Remove(lblDisplay.Text.Length-1) + num;
+                return;
+            }
+
+            if (lblDisplay.Text == "0" && num != ",")
+            {
+                lblDisplay.Text = num;
             }
             else
             {
-                txt = lblDisplay.Text + num;
+                lblDisplay.Text += num;
             }
 
-            decimal number = 0;
-            
             try
             {
-                number = Convert.ToDecimal(txt);
+                decimal number = Convert.ToDecimal(lblDisplay.Text);
                 lblDisplay.Text = number.ToString();
-            } catch
+            } 
+            catch
             {
-                throw new Exception("Something went wrong");
+                throw new OverflowException("Numero demasiado grande o demasiado pequeño");
             }
         }
 
@@ -125,7 +128,10 @@ namespace Calculadora
 
         private void button11_Click(object sender, EventArgs e)
         {
-            AddNumber(",0");
+            if (!lblDisplay.Text.Contains(","))
+            {
+                lblDisplay.Text += ",";
+            }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -133,7 +139,8 @@ namespace Calculadora
             operator1 = Convert.ToDecimal(lblDisplay.Text);
             operation = Operations.Add;
             lblDisplay.Text = "0";
-            statusBar.Text += operator1 + "+";
+            statusBar.Text = operator1 + "+";
+            operationChar = '+';
         }
 
         private void buttonSub_Click(object sender, EventArgs e)
@@ -141,7 +148,8 @@ namespace Calculadora
             operator1 = Convert.ToDecimal(lblDisplay.Text);
             operation = Operations.Sub;
             lblDisplay.Text = "0";
-            statusBar.Text += operator1 + "-";
+            statusBar.Text = operator1 + "-";
+            operationChar = '-';
         }
 
         private void buttonMutl_Click(object sender, EventArgs e)
@@ -149,14 +157,16 @@ namespace Calculadora
             operator1 = Convert.ToDecimal(lblDisplay.Text);
             operation = Operations.Mult;
             lblDisplay.Text = "0";
-            statusBar.Text += operator1 + "x";
+            statusBar.Text = operator1 + "x";
+            operationChar = 'x';
         }
         private void buttonDiv_Click(object sender, EventArgs e)
         {
             operator1 = Convert.ToDecimal(lblDisplay.Text);
             operation = Operations.Div;
             lblDisplay.Text = "0";
-            statusBar.Text += operator1 + "/";
+            statusBar.Text = operator1 + "/";
+            operationChar = '/';
         }
 
         private void buttonPow(object sender, EventArgs e)
@@ -164,7 +174,8 @@ namespace Calculadora
             operator1 = Convert.ToDecimal(lblDisplay.Text);
             operation = Operations.Pow;
             lblDisplay.Text = "0";
-            statusBar.Text += operator1 + "^";
+            statusBar.Text = operator1 + "^";
+            operationChar = '^';
         }
         private void buttonSquareRoot_Click(object sender, EventArgs e)
         {
@@ -176,6 +187,7 @@ namespace Calculadora
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
             operator2 = Convert.ToDecimal(lblDisplay.Text);
+            statusBar.Text += operator2;
             Calculate();
         }
 
@@ -215,15 +227,12 @@ namespace Calculadora
                         break;
                 }
                 lblDisplay.Text = result.ToString();
-                statusBar.Text = "";
+                statusBar.Text = $"{operator1} {operationChar} {operator2} = {result}";
                 operator1 = operator2 = 0;
             }
             catch
             {
-                MessageBox.Show("Operation have been overflown",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                throw new OverflowException("El resultado de la operación es demasiado grande");
             }
         }
 
@@ -240,7 +249,5 @@ namespace Calculadora
             num = -num;
             lblDisplay.Text = num.ToString();
         }
-
-
     }
 }
