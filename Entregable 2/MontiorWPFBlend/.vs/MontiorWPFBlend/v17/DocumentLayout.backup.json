@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\MontiorWPFBlend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPF.csproj|d:\\repo\\masterua\\paee\\entregable 2\\montiorwpfblend\\montiorwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPF.csproj|solutionrelative:montiorwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPF.csproj|d:\\repo\\masterua\\paee\\entregable 2\\montiorwpfblend\\montiorwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPF.csproj|solutionrelative:montiorwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPFBlend.csproj|d:\\repo\\masterua\\paee\\entregable 2\\montiorwpfblend\\montiorwpf\\resource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPFBlend.csproj|solutionrelative:montiorwpf\\resource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPFBlend.csproj|d:\\repo\\masterua\\paee\\entregable 2\\montiorwpfblend\\montiorwpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPFBlend.csproj|solutionrelative:montiorwpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPFBlend.csproj|d:\\repo\\masterua\\paee\\entregable 2\\montiorwpfblend\\montiorwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPFBlend.csproj|solutionrelative:montiorwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPFBlend.csproj|d:\\repo\\masterua\\paee\\entregable 2\\montiorwpfblend\\montiorwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MontiorWPFBlend.csproj|solutionrelative:montiorwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,19 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\MontiorWPFBlend\\MontiorWPF\\App.xaml",
+              "RelativeDocumentMoniker": "MontiorWPF\\App.xaml",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\MontiorWPFBlend\\MontiorWPF\\App.xaml",
+              "RelativeToolTip": "MontiorWPF\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-03T12:19:10.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Resource.xaml",
               "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\MontiorWPFBlend\\MontiorWPF\\Resource.xaml",
               "RelativeDocumentMoniker": "MontiorWPF\\Resource.xaml",
@@ -38,25 +54,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\MontiorWPFBlend\\MontiorWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MontiorWPF\\MainWindow.xaml",
               "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\MontiorWPFBlend\\MontiorWPF\\MainWindow.xaml",
               "RelativeToolTip": "MontiorWPF\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-02T15:41:46.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T15:41:46.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\MontiorWPFBlend\\MontiorWPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MontiorWPF\\MainWindow.xaml.cs",
               "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\MontiorWPFBlend\\MontiorWPF\\MainWindow.xaml.cs",
               "RelativeToolTip": "MontiorWPF\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA2wCkAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvy4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-02T15:41:42.834Z",
               "EditorCaption": ""

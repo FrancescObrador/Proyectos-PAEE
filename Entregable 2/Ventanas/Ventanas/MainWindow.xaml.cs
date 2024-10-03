@@ -19,7 +19,7 @@ namespace Ventanas
         public MainWindow()
         {
             InitializeComponent();
-            framePrincipal.Navigate(new Page1());
+            framePrincipal.Navigate(new MonitorPage());
         }
 
         private void btnAbout_Click(object sender, RoutedEventArgs e)
@@ -29,7 +29,7 @@ namespace Ventanas
 
         private void btnPage1_Click(object sender, RoutedEventArgs e)
         {
-            framePrincipal.Navigate(new Page1());
+            framePrincipal.Navigate(new MonitorPage());
         }
 
         private void btnPage2_Click(object sender, RoutedEventArgs e)
