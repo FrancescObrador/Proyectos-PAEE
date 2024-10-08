@@ -54,7 +54,14 @@ namespace Calculadora
             } 
             catch
             {
-                throw new OverflowException("Numero demasiado grande o demasiado pequeño");
+                MessageBox.Show(
+                    "El numero es demasiado grande o demasiado pequeño", 
+                    "Error",
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
+                lblDisplay.Text = "0";
+                operator1 = operator2 = 0;
+                //throw new OverflowException("Numero demasiado grande o demasiado pequeño");
             }
         }
 
@@ -126,13 +133,6 @@ namespace Calculadora
             AddNumber("9");
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            if (!lblDisplay.Text.Contains(","))
-            {
-                lblDisplay.Text += ",";
-            }
-        }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
@@ -213,7 +213,7 @@ namespace Calculadora
                         }
                         else
                         {
-                            MessageBox.Show("A number can not be divided by zero", "Error",
+                            MessageBox.Show("Un numero no se puede dividir por 0", "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         break;
@@ -232,7 +232,14 @@ namespace Calculadora
             }
             catch
             {
-                throw new OverflowException("El resultado de la operación es demasiado grande");
+                MessageBox.Show(
+                    "El resultado de la operación es demasiado grande", 
+                    "Error",
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
+                lblDisplay.Text = "0";
+                operator1 = operator2 = 0;
+                //throw new OverflowException("El resultado de la operación es demasiado grande");
             }
         }
 
@@ -241,6 +248,14 @@ namespace Calculadora
             lblDisplay.Text = "0";
             statusBar.Text = "";
             operator1 = operator2 = 0;
+        }
+
+        private void buttonComma_Click(object sender, EventArgs e)
+        {
+            if (!lblDisplay.Text.Contains(","))
+            {
+                lblDisplay.Text += ",";
+            }
         }
 
         private void buttonNegative_Click(object sender, EventArgs e)
