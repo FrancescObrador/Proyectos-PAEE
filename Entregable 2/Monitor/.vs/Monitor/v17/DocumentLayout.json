@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Monitor\\",
+  "WorkspaceRootPath": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Monitor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|d:\\repo\\masterua\\paee\\entregable 2\\monitor\\monitor\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|d:\\repo\\masterua\\paee\\proyectos\\entregable 2\\monitor\\monitor\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|solutionrelative:monitor\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Monitor\\monitor\\lectorrecursossistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|solutionrelative:monitor\\lectorrecursossistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Monitor\\monitor\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|solutionrelative:monitor\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Monitor\\monitor\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|solutionrelative:monitor\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|d:\\repo\\masterua\\paee\\proyectos\\entregable 2\\monitor\\monitor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|solutionrelative:monitor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|d:\\repo\\masterua\\paee\\proyectos\\entregable 2\\monitor\\monitor\\monitor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5982EF0-73DA-4669-9D6D-43E2A6E9429F}|Monitor\\Monitor.csproj|solutionrelative:monitor\\monitor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +26,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Monitor.cs [Design]",
-              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Monitor\\Monitor\\Monitor.cs",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Monitor\\Monitor\\Monitor.cs",
               "RelativeDocumentMoniker": "Monitor\\Monitor.cs",
-              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Monitor\\Monitor\\Monitor.cs [Design]",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Monitor\\Monitor\\Monitor.cs [Design]",
               "RelativeToolTip": "Monitor\\Monitor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-02T14:16:46.255Z",
@@ -39,28 +43,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Monitor.cs",
-              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Monitor\\Monitor\\Monitor.cs",
-              "RelativeDocumentMoniker": "Monitor\\Monitor.cs",
-              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Monitor\\Monitor\\Monitor.cs",
-              "RelativeToolTip": "Monitor\\Monitor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Monitor.Designer.cs",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Monitor\\Monitor\\Monitor.Designer.cs",
+              "RelativeDocumentMoniker": "Monitor\\Monitor.Designer.cs",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Monitor\\Monitor\\Monitor.Designer.cs",
+              "RelativeToolTip": "Monitor\\Monitor.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T14:30:55.33Z",
+              "WhenOpened": "2024-10-09T08:14:15.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LectorRecursosSistema.cs",
-              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Monitor\\Monitor\\LectorRecursosSistema.cs",
-              "RelativeDocumentMoniker": "Monitor\\LectorRecursosSistema.cs",
-              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Monitor\\Monitor\\LectorRecursosSistema.cs",
-              "RelativeToolTip": "Monitor\\LectorRecursosSistema.cs",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAAwMQAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Monitor\\Monitor\\Program.cs",
+              "RelativeDocumentMoniker": "Monitor\\Program.cs",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Monitor\\Monitor\\Program.cs",
+              "RelativeToolTip": "Monitor\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T14:23:43.255Z",
+              "WhenOpened": "2024-10-09T08:14:09.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Monitor.cs",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Monitor\\Monitor\\Monitor.cs",
+              "RelativeDocumentMoniker": "Monitor\\Monitor.cs",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Monitor\\Monitor\\Monitor.cs",
+              "RelativeToolTip": "Monitor\\Monitor.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T14:30:55.33Z",
               "EditorCaption": ""
             }
           ]

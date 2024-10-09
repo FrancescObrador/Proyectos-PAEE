@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\",
+  "WorkspaceRootPath": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|d:\\repo\\masterua\\paee\\entregable 2\\ventanas\\ventanas\\monitorpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|solutionrelative:ventanas\\monitorpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|d:\\repo\\masterua\\paee\\entregable 2\\ventanas\\ventanas\\dictionary1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|solutionrelative:ventanas\\dictionary1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|d:\\repo\\masterua\\paee\\entregable 2\\ventanas\\ventanas\\page2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|d:\\repo\\masterua\\paee\\proyectos\\entregable 2\\ventanas\\ventanas\\page2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|solutionrelative:ventanas\\page2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|d:\\repo\\masterua\\paee\\entregable 2\\ventanas\\ventanas\\monitorpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|solutionrelative:ventanas\\monitorpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|d:\\repo\\masterua\\paee\\proyectos\\entregable 2\\ventanas\\ventanas\\page2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|solutionrelative:ventanas\\page2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|d:\\repo\\masterua\\paee\\entregable 2\\ventanas\\ventanas\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|d:\\repo\\masterua\\paee\\proyectos\\entregable 2\\ventanas\\ventanas\\monitorpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|solutionrelative:ventanas\\monitorpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|d:\\repo\\masterua\\paee\\proyectos\\entregable 2\\ventanas\\ventanas\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|solutionrelative:ventanas\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|d:\\repo\\masterua\\paee\\proyectos\\entregable 2\\ventanas\\ventanas\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F0F20D-31FB-4DA0-983A-692F6417A443}|Ventanas\\Ventanas.csproj|solutionrelative:ventanas\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,68 +29,69 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 250,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dictionary1.xaml",
-              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\Ventanas\\Dictionary1.xaml",
-              "RelativeDocumentMoniker": "Ventanas\\Dictionary1.xaml",
-              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\Ventanas\\Dictionary1.xaml",
-              "RelativeToolTip": "Ventanas\\Dictionary1.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-03T12:43:01.315Z",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\Ventanas\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Ventanas\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\Ventanas\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Ventanas\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T08:24:02.569Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Page2.xaml",
-              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\Ventanas\\Page2.xaml",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\Ventanas\\Page2.xaml",
               "RelativeDocumentMoniker": "Ventanas\\Page2.xaml",
-              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\Ventanas\\Page2.xaml",
-              "RelativeToolTip": "Ventanas\\Page2.xaml",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\Ventanas\\Page2.xaml*",
+              "RelativeToolTip": "Ventanas\\Page2.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-03T12:25:02.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MonitorPage.xaml",
-              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\Ventanas\\MonitorPage.xaml",
-              "RelativeDocumentMoniker": "Ventanas\\MonitorPage.xaml",
-              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\Ventanas\\MonitorPage.xaml",
-              "RelativeToolTip": "Ventanas\\MonitorPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-03T12:21:01.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MonitorPage.xaml.cs",
-              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\Ventanas\\MonitorPage.xaml.cs",
-              "RelativeDocumentMoniker": "Ventanas\\MonitorPage.xaml.cs",
-              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\Ventanas\\MonitorPage.xaml.cs",
-              "RelativeToolTip": "Ventanas\\MonitorPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T12:04:21.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\Ventanas\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\Ventanas\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Ventanas\\MainWindow.xaml",
-              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Entregable 2\\Ventanas\\Ventanas\\MainWindow.xaml",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\Ventanas\\MainWindow.xaml",
               "RelativeToolTip": "Ventanas\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-02T17:54:44.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Page2.xaml.cs",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\Ventanas\\Page2.xaml.cs",
+              "RelativeDocumentMoniker": "Ventanas\\Page2.xaml.cs",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\Ventanas\\Page2.xaml.cs",
+              "RelativeToolTip": "Ventanas\\Page2.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:55:32.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MonitorPage.xaml",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\Ventanas\\MonitorPage.xaml",
+              "RelativeDocumentMoniker": "Ventanas\\MonitorPage.xaml",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Entregable 2\\Ventanas\\Ventanas\\MonitorPage.xaml",
+              "RelativeToolTip": "Ventanas\\MonitorPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-03T12:21:01.712Z",
               "EditorCaption": ""
             }
           ]

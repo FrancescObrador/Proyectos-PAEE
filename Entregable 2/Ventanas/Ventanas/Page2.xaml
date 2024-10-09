@@ -11,8 +11,8 @@
     <WrapPanel Orientation="Horizontal">
         <Label Content="Page 2" Background="LightCoral"/>
         <Label Content="Esto es wrap panel" Width="400px" Background="AliceBlue"/>
-        <Label Content="bla bla bla" Background="Red"/>
-        <Image Source="https://w7.pngwing.com/pngs/894/216/png-transparent-know-your-meme-andras-arato-hungary-meme-hand-meme-dna-thumbnail.png" Height="247" Width="254"/>
+        <Label Content="contenido que empuja" Background="Red"/>
+        <Image Source="https://upload.wikimedia.org/wikipedia/commons/8/8e/Khan_Academy_Metro_app_%28main_screen%29.png" Height="251" Width="446"/>
 
     </WrapPanel>
 </Page>

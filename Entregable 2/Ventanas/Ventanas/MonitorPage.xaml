@@ -38,7 +38,8 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Label x:Name="Monitor_Actividad" Content="Monitor de actividad" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontFamily="Bahnschrift" FontSize="20"/>
+        <Label x:Name="Monitor_Actividad" Content="Monitor de actividad" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
+               HorizontalAlignment="Center" FontFamily="Bahnschrift" FontSize="20"/>
         <Label Name="ordenador" Content="Ordenador" Grid.Column="0" Grid.Row="1" Style="{DynamicResource titulo}" Grid.ColumnSpan="2"/>
         <Label Name="lblUsuario" Content="Valor usuario" Grid.Column="0" Grid.Row="2"/>
         <Label x:Name="Fabricante" Content="Fabricante" Grid.Column="0" Grid.Row="3" Style="{DynamicResource titulo}" Grid.ColumnSpan="2"/>

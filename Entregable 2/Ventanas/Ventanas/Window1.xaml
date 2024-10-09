@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        <Label Content="Esto es una ventana, si deja hacer focus a la otra / principal"/>
+        <Label Content="Esto es una ventana, si deja hacer focus a la otra / principal"
+       HorizontalAlignment="Center"
+       VerticalAlignment="Center"/>
     </Grid>
 </Window>
