@@ -1,0 +1,15 @@
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\bin\Debug\Domotica.exe.config
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\bin\Debug\Domotica.exe
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\bin\Debug\Domotica.pdb
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\Domotica.csproj.AssemblyReference.cache
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\MainWindow.g.cs
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\App.g.cs
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\Domotica_MarkupCompile.cache
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\Domotica_MarkupCompile.lref
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\MainWindow.baml
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\Domotica.g.resources
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\Domotica.Properties.Resources.resources
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\Domotica.csproj.GenerateResource.cache
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\Domotica.csproj.CoreCompileInputs.cache
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\Domotica.exe
+D:\Carpetas\repos\MasterUA\PAEE\Domotica\Domotica\obj\Debug\Domotica.pdb

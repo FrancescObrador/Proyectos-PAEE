@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "EkMbYY7CV5w=",
+  "success": true,
+  "projectFilePath": "D:\\Carpetas\\repos\\MasterUA\\PAEE\\Taller 3\\MontiorWPFBlend\\MontiorWPF\\MontiorWPFBlend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kikel\\.nuget\\packages\\propertytools\\3.1.0\\propertytools.3.1.0.nupkg.sha512",
+    "C:\\Users\\kikel\\.nuget\\packages\\propertytools.wpf\\3.1.0\\propertytools.wpf.3.1.0.nupkg.sha512",
+    "C:\\Users\\kikel\\.nuget\\packages\\system.codedom\\8.0.0\\system.codedom.8.0.0.nupkg.sha512",
+    "C:\\Users\\kikel\\.nuget\\packages\\system.componentmodel.annotations\\4.6.0\\system.componentmodel.annotations.4.6.0.nupkg.sha512",
+    "C:\\Users\\kikel\\.nuget\\packages\\system.management\\8.0.0\\system.management.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
