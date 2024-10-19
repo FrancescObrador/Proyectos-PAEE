@@ -1,9 +1,8 @@
 ﻿using MonitorSistema;
-using MontiorWPFBlend;
 using System.Windows;
 using System.Windows.Media;
 
-namespace MonitorWPFBlend
+namespace MonitorWPFPersonalizacion
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

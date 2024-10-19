@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|d:\\repo\\masterua\\paee\\proyectos\\taller 3\\02-montiorwpfpersonalizacion\\montiorwpf\\windowconfig.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|solutionrelative:montiorwpf\\windowconfig.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|d:\\repo\\masterua\\paee\\proyectos\\taller 3\\02-montiorwpfpersonalizacion\\montiorwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|solutionrelative:montiorwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|d:\\repo\\masterua\\paee\\proyectos\\taller 3\\02-montiorwpfpersonalizacion\\montiorwpf\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|solutionrelative:montiorwpf\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|d:\\repo\\masterua\\paee\\proyectos\\taller 3\\02-montiorwpfpersonalizacion\\montiorwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,12 +15,20 @@
       "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|solutionrelative:montiorwpf\\windowconfig.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|d:\\repo\\masterua\\paee\\proyectos\\taller 3\\02-montiorwpfpersonalizacion\\montiorwpf\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|solutionrelative:montiorwpf\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|d:\\repo\\masterua\\paee\\proyectos\\taller 3\\02-montiorwpfpersonalizacion\\montiorwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|solutionrelative:montiorwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|d:\\repo\\masterua\\paee\\proyectos\\taller 3\\02-montiorwpfpersonalizacion\\montiorwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|solutionrelative:montiorwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68650646-C5DB-4AA0-8BC3-3FDCAA8EF40F}|TestMonitorSistema\\TestMonitorSistema.csproj|d:\\repo\\masterua\\paee\\proyectos\\taller 3\\02-montiorwpfpersonalizacion\\testmonitorsistema\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68650646-C5DB-4AA0-8BC3-3FDCAA8EF40F}|TestMonitorSistema\\TestMonitorSistema.csproj|solutionrelative:testmonitorsistema\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|d:\\repo\\masterua\\paee\\proyectos\\taller 3\\02-montiorwpfpersonalizacion\\montiorwpf\\windowconfig.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B218387D-FF4E-4492-B9FD-C517FF540A6F}|MontiorWPF\\MonitorWPFPersonalizacion.csproj|solutionrelative:montiorwpf\\windowconfig.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,70 +38,81 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\App.xaml.cs",
+              "RelativeDocumentMoniker": "MontiorWPF\\App.xaml.cs",
+              "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\App.xaml.cs",
+              "RelativeToolTip": "MontiorWPF\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T12:47:40.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Config.cs",
               "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\Config.cs",
               "RelativeDocumentMoniker": "MontiorWPF\\Config.cs",
               "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\Config.cs",
               "RelativeToolTip": "MontiorWPF\\Config.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T16:38:59.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "WindowConfig.xaml.cs",
               "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\WindowConfig.xaml.cs",
               "RelativeDocumentMoniker": "MontiorWPF\\WindowConfig.xaml.cs",
               "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\WindowConfig.xaml.cs",
               "RelativeToolTip": "MontiorWPF\\WindowConfig.xaml.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T16:18:52.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MontiorWPF\\MainWindow.xaml.cs",
               "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\MainWindow.xaml.cs",
               "RelativeToolTip": "MontiorWPF\\MainWindow.xaml.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAFEAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T16:21:17.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MontiorWPF\\MainWindow.xaml",
               "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\MainWindow.xaml",
               "RelativeToolTip": "MontiorWPF\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-16T16:14:11.084Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T16:14:11.084Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "WindowConfig.xaml",
               "DocumentMoniker": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\WindowConfig.xaml",
               "RelativeDocumentMoniker": "MontiorWPF\\WindowConfig.xaml",
               "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\MontiorWPF\\WindowConfig.xaml",
               "RelativeToolTip": "MontiorWPF\\WindowConfig.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-16T16:15:55.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T16:15:55.256Z"
             },
             {
               "$type": "Document",
@@ -107,7 +122,7 @@
               "RelativeDocumentMoniker": "TestMonitorSistema\\UnitTest1.cs",
               "ToolTip": "D:\\repo\\MasterUA\\PAEE\\Proyectos\\Taller 3\\02-MontiorWPFPersonalizacion\\TestMonitorSistema\\UnitTest1.cs",
               "RelativeToolTip": "TestMonitorSistema\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T16:47:47.245Z"
             }

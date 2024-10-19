@@ -1,4 +1,4 @@
-using MontiorWPFBlend;
+using MonitorWPFPersonalizacion;
 
 namespace TestMonitorSistema
 {
