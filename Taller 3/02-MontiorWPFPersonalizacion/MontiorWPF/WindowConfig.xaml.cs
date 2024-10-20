@@ -42,9 +42,16 @@ namespace MonitorWPFPersonalizacion
             {
                 cpColor.SelectedColor = (Color?)ColorConverter.ConvertFromString(color);
             }
+
+            // Load window pos
+            this.Left = Convert.ToDouble(Config.GetInstance().left);
+            this.Top = Convert.ToDouble(Config.GetInstance().top);
+
+            lblPosition.Content = "Posición: (" + Config.GetInstance().left + "," + Config.GetInstance().top + ")";
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Aceptar_Click(object sender, RoutedEventArgs e)
         {
             Close();
 
@@ -53,19 +60,25 @@ namespace MonitorWPFPersonalizacion
             {
                 Config.GetInstance().lang = "es";
             }
-            else if((bool)rbLangEN.IsChecked)
+            else if ((bool)rbLangEN.IsChecked)
             {
-                Config.GetInstance().lang = "es";
+                Config.GetInstance().lang = "en";
             }
 
             // Guardar color
             string color = cpColor.SelectedColor.Value.ToString();
             Config.GetInstance().color = color;
 
-            Config.GetInstance().left = Application.Current.MainWindow.Left.ToString();
-            Config.GetInstance().top = Application.Current.MainWindow.Top.ToString();
+            // Guardar posicion de la nueva ventana
+            Config.GetInstance().left = this.Left.ToString();
+            Config.GetInstance().top = this.Top.ToString();
             
             Config.GetInstance().Save();
+        }
+
+        private void Cancelar_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -19,8 +19,11 @@
                     <pt:ColorPicker Name="cpColor" SelectedColor="Red"></pt:ColorPicker>
                 </StackPanel>
             </GroupBox>
-
         </StackPanel>
-        <Button Content="Cerrar" Click="Button_Click"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="center">
+            <Button Content="Aceptar" Width="75" Margin="5" Click="Aceptar_Click"/>
+            <Button Content="Cancelar" Width="75" Margin="5" Click="Cancelar_Click"/>
+            <Label Name="lblPosition" Content="(0.0,0.0)" VerticalAlignment="Bottom"/>
+        </StackPanel>
     </StackPanel>
 </Window>
