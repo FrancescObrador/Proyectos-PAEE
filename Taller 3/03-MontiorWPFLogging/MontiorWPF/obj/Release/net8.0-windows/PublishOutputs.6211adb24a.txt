@@ -1,7 +1,0 @@
-D:\Carpetas\repos\MasterUA\PAEE\Entregable 2\MontiorWPFBlend\MontiorWPF\bin\Release\net8.0-windows\app.publish\MontiorWPFBlend.exe
-D:\Carpetas\repos\MasterUA\PAEE\Entregable 2\MontiorWPFBlend\MontiorWPF\bin\Release\net8.0-windows\app.publish\MontiorWPFBlend.dll
-D:\Carpetas\repos\MasterUA\PAEE\Entregable 2\MontiorWPFBlend\MontiorWPF\bin\Release\net8.0-windows\app.publish\MontiorWPFBlend.deps.json
-D:\Carpetas\repos\MasterUA\PAEE\Entregable 2\MontiorWPFBlend\MontiorWPF\bin\Release\net8.0-windows\app.publish\MontiorWPFBlend.runtimeconfig.json
-D:\Carpetas\repos\MasterUA\PAEE\Entregable 2\MontiorWPFBlend\MontiorWPF\bin\Release\net8.0-windows\app.publish\MontiorWPFBlend.pdb
-D:\Carpetas\repos\MasterUA\PAEE\Entregable 2\MontiorWPFBlend\MontiorWPF\bin\Release\net8.0-windows\app.publish\System.Management.dll
-D:\Carpetas\repos\MasterUA\PAEE\Entregable 2\MontiorWPFBlend\MontiorWPF\bin\Release\net8.0-windows\app.publish\runtimes\win\lib\net8.0\System.Management.dll
