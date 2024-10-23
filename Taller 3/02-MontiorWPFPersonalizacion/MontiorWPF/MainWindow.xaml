@@ -1,0 +1,79 @@
+﻿<Window x:Class="MonitorWPFPersonalizacion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MonitorWPFPersonalizacion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800
+" Width="800">
+    <Grid VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="Monitor_Actividad" Content="Monitor de actividad" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontFamily="Bahnschrift" FontSize="20"/>
+        <Label Name="ordenador" Content="Ordenador" Grid.Column="0" Grid.Row="1" Style="{DynamicResource titulo}" Grid.ColumnSpan="2"/>
+        <Label Name="lblUsuario" Content="Valor usuario" Grid.Column="0" Grid.Row="2"/>
+        <Label x:Name="Fabricante" Content="Fabricante" Grid.Column="0" Grid.Row="3" Style="{DynamicResource titulo}" Grid.ColumnSpan="2"/>
+        
+        <Label Name="lblFabricante" Content="Valor Fabricante" Grid.Column="0" Grid.Row="4"/>
+        <Label x:Name="Modelo" Content="Modelo" Grid.Column="0" Grid.Row="5" Style="{DynamicResource titulo}" Grid.ColumnSpan="2"/>
+        
+        <Label Name="lblProcesador" Content="Valor Procesador" Grid.Column="0" Grid.Row="6"/>
+        <Label Name="lblModelo" Content="Valor Modelo" Grid.Column="1" Grid.Row="6"/>
+        <Label x:Name="CPU" Content="CPU" Grid.Column="0" Grid.Row="7" Style="{DynamicResource titulo}" Grid.ColumnSpan="2"/>
+        
+        <Label Name="lblCPU" Content="Valor CPU" Grid.Column="0" Grid.Row="8"/>
+        <Label x:Name="Memoria" Content="Memoria" Grid.Column="0" Grid.Row="9" Style="{DynamicResource titulo}" Grid.ColumnSpan="2"/>
+        
+        <Label x:Name="MemoriaFisica" Content="Física" Grid.Column="0" Grid.Row="10" Style="{DynamicResource subtitulo}" />
+        <Label Name="lblMemFisica" Content="Valor Fisica" Grid.Column="1" Grid.Row="10"/>
+        <Label x:Name="MemoriaVirtual" Content="Virtual" Grid.Column="0" Grid.Row="11" Style="{DynamicResource subtitulo}"/>
+        <Label Name="lblMemVirtual" Content="Valor virtual" Grid.Column="1" Grid.Row="11"/>
+        <Label x:Name="Disco" Content="Disco" Grid.Column="0" Grid.Row="12" Style="{DynamicResource titulo}" Grid.ColumnSpan="2"/>
+        
+        <Label Name="lblDiscoLogico" Content="valor discos logicos" Grid.Column="0" Grid.Row="13"/>
+        <Label x:Name="DiscoLec" Content="Lectura" Grid.Column="0" Grid.Row="14" Style="{DynamicResource subtitulo}"/>
+        <Label Name="lblLectura" Content="Valor lectura" Grid.Column="1" Grid.Row="14"/>
+        <Label x:Name="DiscoEscritura" Content="Escritura" Grid.Column="0" Grid.Row="15" Style="{DynamicResource subtitulo}"/>
+        <Label Name="lblEscritura" Content="Valor escritura" Grid.Column="1" Grid.Row="15"/>
+        <Label x:Name="DiscoLecEsc" Content="Lec/Esc" Grid.Column="0" Grid.Row="16" Style="{DynamicResource subtitulo}"/>
+        <Label Name="lblLecEsc" Content="Valor lec/esc" Grid.Column="1" Grid.Row="16"/>
+        <Label x:Name="Red" Content="Red" Grid.Column="0" Grid.Row="17" Style="{DynamicResource titulo}" Grid.ColumnSpan="2"/>
+        
+        <Label x:Name="PaquetesRecibidos" Content="Paquetes recibidos" Grid.Column="0" Grid.Row="18" Style="{DynamicResource subtitulo}"/>
+        <Label Name="lblRecibidos" Content="val paq rec" Grid.Column="1" Grid.Row="18"/>
+        <Label x:Name="PaquetesEnviados" Content="Paquetes enviados" Grid.Column="0" Grid.Row="19" Style="{DynamicResource subtitulo}"/>
+        <Label Name="lblEnviados" Content="val paq env" Grid.Column="1" Grid.Row="19"/>
+        <Label x:Name="PaquetesRecEnv" Content="Paquetes enviados / recibidos" Grid.Column="0" Grid.Row="20" Style="{DynamicResource subtitulo}"/>
+        <Label Name="lblEnviadosRecibidos" Content="val paq env rec" Grid.Column="1" Grid.Row="20"/>
+        <Button Name="btnAcutalizar" Content="Iniciar" Grid.Row="21" Grid.Column="0"  Width="150" Click="btnAcutalizar_Click"/>
+        <Button Name="btnPersonalizar" Content="Personalizar" Grid.Row="21" Grid.Column="1" Width="150" Click="btnPersonalizar_Click"/>
+    </Grid>
+</Window>
