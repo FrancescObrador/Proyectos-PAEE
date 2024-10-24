@@ -5,14 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Diagnostics;
+using System.Numerics;
 
-namespace MontiorWPFBlend
+namespace MonitorWPFi18n
 {
     public class Config
     {
-        private static TraceSource logger = new TraceSource("MonitorWPF");
         public string lang { get; set; }
         public string color { get; set; }
+        public string left { get; set; }
+        public string top { get; set; }
+
         private static Config _instance;
 
         private Config() { }
@@ -28,17 +31,18 @@ namespace MontiorWPFBlend
 
         public void InitDefaults()
         {
-            lang = "es";
+            lang = "en-US";
             color = "#FF0000";
+            left = "0";
+            top = "0";
         }
 
         public void Load()
         {
-            logger.TraceEvent(TraceEventType.Information, 1, "Config: cargando configuración");
             lang = Read("lang");
             color = Read("color");
-            logger.TraceEvent(TraceEventType.Information, 1, "Config: color leído: " + color);
-            logger.TraceEvent(TraceEventType.Information, 1, "Config: idioma leído: " + lang);
+            left = Read("left");
+            top = Read("top");
         }
 
         public string Read(string key)
@@ -62,10 +66,10 @@ namespace MontiorWPFBlend
         public void Save()
         {
             var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            logger.TraceEvent(TraceEventType.Information, 1, "Config: Intentando guardar: " + lang);
             Write(configFile, "lang", lang);
-            logger.TraceEvent(TraceEventType.Information, 1, "Config: Intentando guardar: " + color);
             Write(configFile, "color", color);
+            Write(configFile, "left", left);
+            Write(configFile, "top", top);
             configFile.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
         }

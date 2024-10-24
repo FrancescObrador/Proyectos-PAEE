@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MontiorWPFBlend", "MontiorWPF\MontiorWPFBlend.csproj", "{B218387D-FF4E-4492-B9FD-C517FF540A6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonitorWPFi18n", "MontiorWPF\MonitorWPFi18n.csproj", "{B218387D-FF4E-4492-B9FD-C517FF540A6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMonitorSistema", "TestMonitorSistema\TestMonitorSistema.csproj", "{68650646-C5DB-4AA0-8BC3-3FDCAA8EF40F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMonitorSistema", "TestMonitorSistema\TestMonitorSistema.csproj", "{68650646-C5DB-4AA0-8BC3-3FDCAA8EF40F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

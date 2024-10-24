@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MontiorWPF\MontiorWPFBlend.csproj" />
+    <ProjectReference Include="..\MontiorWPF\MonitorWPFi18n.csproj" />
   </ItemGroup>
 
   <ItemGroup>

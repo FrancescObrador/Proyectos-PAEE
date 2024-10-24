@@ -1,9 +1,8 @@
 ﻿using MonitorSistema;
-using MontiorWPFBlend;
 using System.Windows;
 using System.Windows.Media;
 
-namespace MonitorWPFBlend
+namespace MonitorWPFi18n
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -14,9 +13,10 @@ namespace MonitorWPFBlend
         private System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
         public MainWindow()
         {
-            InitializeComponent();
             Config.GetInstance().InitDefaults();
             Config.GetInstance().Load();
+            cambiarIdioma();
+            InitializeComponent();  
             aplicarConfiguracion();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             this.Acutalizar();
@@ -66,12 +66,23 @@ namespace MonitorWPFBlend
             var dlg = new WindowConfig();
             dlg.ShowDialog();
             aplicarConfiguracion();
+            cambiarIdioma();
+        }
+        
+        private void cambiarIdioma()
+        {
+            var lang = Config.GetInstance().lang;
+            if(lang != null)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(lang);
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(lang);
+            }
         }
 
         private void aplicarConfiguracion()
         {
             var color = Config.GetInstance().color;
-            if (color is null) color = "Red";
+            if (color == "") color = "Red";
             var bgColor = new SolidColorBrush((Color)ColorConverter.ConvertFromString(color));
             Memoria.Background = bgColor;
             ordenador.Background = bgColor;

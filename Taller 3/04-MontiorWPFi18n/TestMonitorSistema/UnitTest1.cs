@@ -1,4 +1,4 @@
-using MontiorWPFBlend;
+using MonitorWPFi18n;
 
 namespace TestMonitorSistema
 {
