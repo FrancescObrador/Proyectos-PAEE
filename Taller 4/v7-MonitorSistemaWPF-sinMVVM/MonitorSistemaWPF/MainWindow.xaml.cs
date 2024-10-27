@@ -23,7 +23,7 @@ namespace MonitorSistemaWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        LectorRecursosSistema lectorRecursosSistema = new LectorRecursosSistema();
+       // LectorRecursosSistema lectorRecursosSistema = new LectorRecursosSistema();
         private RecursosSistema recursosSistemaVM;
 
         public MainWindow()
@@ -31,7 +31,7 @@ namespace MonitorSistemaWPF
             InitializeComponent();
             // Setup del view-model
             recursosSistemaVM = new RecursosSistema();
-            this.DataContext = recursosSistemaVM;
+            //this.DataContext = recursosSistemaVM;
         }
     }
 }

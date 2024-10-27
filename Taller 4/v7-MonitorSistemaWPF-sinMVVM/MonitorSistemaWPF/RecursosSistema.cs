@@ -29,6 +29,7 @@ namespace MonitorSistemaWPF
         System.Windows.Threading.DispatcherTimer dispatcherTimer;
 
         public event PropertyChangedEventHandler PropertyChanged;
+        public Boolean Ejecutando { get => ejecutandose(); }
 
         public RecursosSistema() 
         {
