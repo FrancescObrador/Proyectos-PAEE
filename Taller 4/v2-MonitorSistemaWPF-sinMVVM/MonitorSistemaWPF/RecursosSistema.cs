@@ -88,8 +88,16 @@ namespace MonitorSistemaWPF
         {
 
             this.cpu.Valor = lectorRecursosSistema.getCPU();
-            this.memoria[0].Valor = lectorRecursosSistema.getMemoriaFisica();
-            this.memoria[1].Valor = lectorRecursosSistema.getMemoriaVirtual();
+
+            double totalMemoriaFisica = lectorRecursosSistema.getMemoriaFisicaTotal();
+            double memoriaFisicaDisponible = lectorRecursosSistema.getMemoriaFisicaDisponible();
+            double memoriaFisicaUsada = totalMemoriaFisica - memoriaFisicaDisponible;
+            this.memoria[0].Valor = (memoriaFisicaUsada / totalMemoriaFisica) * 100;
+
+            double memoriaVirtualComprometida = lectorRecursosSistema.getMemoriaVirtualComprometida();
+            double memoriaVirtualLimite = lectorRecursosSistema.getMemoriaVirtualLimite();
+            this.memoria[1].Valor = (memoriaVirtualComprometida / memoriaVirtualLimite) * 100;
+
             this.disco[0].Valor = lectorRecursosSistema.getDatosDisco(LectorRecursosSistema.DiskData.Read);
             this.disco[1].Valor = lectorRecursosSistema.getDatosDisco(LectorRecursosSistema.DiskData.Write);
             this.disco[2].Valor = lectorRecursosSistema.getDatosDisco(LectorRecursosSistema.DiskData.ReadAndWrite);

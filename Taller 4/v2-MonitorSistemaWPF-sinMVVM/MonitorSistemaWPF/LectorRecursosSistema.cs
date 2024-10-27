@@ -93,6 +93,28 @@ namespace MonitorSistema
             //return compacto ? (int)d + s : d.ToString("F") + s;
         }
 
+        // Valores desglosados:
+        public double getMemoriaFisicaTotal()
+        {
+            string s = QueryComputerSystem("totalphysicalmemory");
+            return Convert.ToDouble(s);
+        }
+
+        public double getMemoriaFisicaDisponible()
+        {
+            return GetCounterValue(memoria, "Memory", "Available Bytes", null);
+        }
+
+        public double getMemoriaVirtualComprometida()
+        {
+            return GetCounterValue(memoria, "Memory", "Committed Bytes", null);
+        }
+
+        public double getMemoriaVirtualLimite()
+        {
+            return GetCounterValue(memoria, "Memory", "Commit Limit", null);
+        }
+
         public enum DiskData { ReadAndWrite, Read, Write };
 
         public double getDatosDisco(DiskData dd)

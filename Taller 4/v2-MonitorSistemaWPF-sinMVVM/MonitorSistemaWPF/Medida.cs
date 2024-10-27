@@ -25,8 +25,13 @@ namespace MonitorSistemaWPF
             get { 
                 return valor; 
             } 
-            set { 
-                valor = value;
+            set 
+            { 
+                if(valor != 0)
+                {
+                    // Evitamos valores de 0
+                    valor = value;
+                }
                 OnPropertyChanged("Valor");
             } 
         }
