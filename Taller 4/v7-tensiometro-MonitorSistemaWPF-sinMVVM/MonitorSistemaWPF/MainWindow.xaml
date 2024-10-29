@@ -1,0 +1,84 @@
+﻿<Window x:Name="window" x:Class="MonitorSistemaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:MonitorSistemaWPF"
+        mc:Ignorable="d"
+        Title="Monitor de sistema" Height="600" Width="600">
+
+    <Window.DataContext>
+        <local:TensiometroVM/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate x:Key="medidaTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Width="200" Text="{Binding Titulo}"/>
+                <TextBlock Width="100" Text="{Binding Valor}"/>
+                <TextBlock Width="100" Text="{Binding ValorMaximo}"/>
+                <TextBlock Width="100" Text="{Binding ValorMinimo}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid x:Name="grid" Background="Transparent">
+        <i:Interaction.Behaviors>
+            <i:DataStateBehavior Binding="{Binding Ejecutando}" 
+                                 Value="true" 
+                                 TrueState="Ejecutando" 
+                                 FalseState="Parado"/>
+        </i:Interaction.Behaviors>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition From="Parado" To="Ejecutando" GeneratedDuration="0:0:1"/>
+                </VisualStateGroup.Transitions>
+
+                <VisualState x:Name="Ejecutando">
+                    <Storyboard>
+                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="grid" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                            <EasingColorKeyFrame KeyTime="0:0:0" Value="#FF965050"/>
+                        </ColorAnimationUsingKeyFrames>
+                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="lblTension" Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)">
+                            <EasingColorKeyFrame KeyTime="0:0:0" Value="#FF965050"/>
+                        </ColorAnimationUsingKeyFrames>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="window" Storyboard.TargetProperty="(FrameworkElement.Height)">
+                            <EasingDoubleKeyFrame KeyTime="0:0:0" Value="626"/>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="Parado"/>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Tensiometro" Grid.Row="0" Grid.ColumnSpan="4" Background="White" HorizontalAlignment="Center"/>
+
+        <Label Content="Sistólica" Grid.Row="1" Grid.Column="1" Background="White" HorizontalAlignment="Center"/>
+        <Label Content="Diastólica" Grid.Row="1" Grid.Column="2" Background="White" HorizontalAlignment="Center"/>
+
+        <Label Name="lblTension" Content="{Binding Tension}" Grid.Row="2" Grid.ColumnSpan="4" ContentTemplate="{StaticResource medidaTemplate}"/>
+
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Iniciar" Command="{Binding CommandoStart}" Width="150" Margin="5"/>
+            <Button Content="Parar" Command="{Binding CommandoStop}" Width="150" Margin="5"/>
+            <Button Content="Reset" Command="{Binding CommandoReset}" Width="150" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
