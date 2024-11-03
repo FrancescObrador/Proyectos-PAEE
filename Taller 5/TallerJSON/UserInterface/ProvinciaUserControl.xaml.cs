@@ -35,12 +35,19 @@ namespace UserInterface
                 try
                 {
                     string path = Path.Combine(Environment.CurrentDirectory, "escudos", value.Escudo);
-                    if(path == null | path == "") path = Path.Combine(Environment.CurrentDirectory, "escudos", "alacant.png");
+                    
+                    // Si el archivo no existe o el path falla pongo el escudo de alicante
+                    if (!File.Exists(path))
+                    {
+                        path = Path.Combine(Environment.CurrentDirectory, "escudos", "alacant.png");
+                        MessageBox.Show($"El escudo de {value.Escudo} no existe", $"Error con escudo {value.Escudo}", MessageBoxButton.OK, MessageBoxImage.Warning); ;
+                    }
+
                     this.escudoImage.Source = new BitmapImage(new Uri(path));
                 }
                 catch (Exception ex) 
                 {
-                    
+                    MessageBox.Show("Algún error ha ocurrido durante la carga de una provincia", "Error de carga", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 
             }

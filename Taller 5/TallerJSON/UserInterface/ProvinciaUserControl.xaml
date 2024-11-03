@@ -5,20 +5,36 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UserInterface"
              mc:Ignorable="d" 
-             d:DesignHeight="30" d:DesignWidth="700">
-    <Grid>
-        <Label Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Margin="22,4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" LostFocus="idTextBox_LostFocus"/>
-        
-        <Label Content="Nombre" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="77,0,0,0"/>
-        <TextBox x:Name="nombreTextBox" HorizontalAlignment="Left" Margin="131,4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="211" LostFocus="nombreTextBox_LostFocus"/>
-        
-        <Label Content="Población" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="360,0,0,0"/>
-        <TextBox x:Name="poblacionTextBox" HorizontalAlignment="Left" Margin="430,4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" LostFocus="populationTextBox_LostFocus"/>
+             d:DesignHeight="50" d:DesignWidth="750">
+    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5" Margin="5">
+        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
 
-        <Label Content="Tamaño" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,0,0,0"/>
-        <TextBox x:Name="superficieTextBox" HorizontalAlignment="Left" Margin="570,4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" LostFocus="sizeTextBox_LostFocus"/>
+            <!-- ID -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Label Content="ID:" Margin="0,0,5,0"/>
+                <TextBox x:Name="idTextBox" MinWidth="40" VerticalContentAlignment="Center" LostFocus="idTextBox_LostFocus"/>
+            </StackPanel>
 
-        <Image x:Name="escudoImage" HorizontalAlignment="Left" Margin="670,0,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-    </Grid>
+            <!-- Nombre -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Label Content="Nombre:" Margin="10,0,5,0"/>
+                <TextBox x:Name="nombreTextBox" MinWidth="100" VerticalContentAlignment="Center" LostFocus="nombreTextBox_LostFocus"/>
+            </StackPanel>
+
+            <!-- Población -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Label Content="Población:" Margin="10,0,5,0"/>
+                <TextBox x:Name="poblacionTextBox" MinWidth="80" VerticalContentAlignment="Center" LostFocus="populationTextBox_LostFocus"/>
+            </StackPanel>
+
+            <!-- Tamaño -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Label Content="Tamaño:" Margin="10,0,5,0"/>
+                <TextBox x:Name="superficieTextBox" MinWidth="80" VerticalContentAlignment="Center" LostFocus="sizeTextBox_LostFocus"/>
+            </StackPanel>
+
+            <!-- Imagen -->
+            <Image x:Name="escudoImage" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        </WrapPanel>
+    </Border>
 </UserControl>
