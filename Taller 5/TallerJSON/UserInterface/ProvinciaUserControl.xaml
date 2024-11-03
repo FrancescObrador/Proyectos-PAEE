@@ -34,7 +34,7 @@
             </StackPanel>
 
             <!-- Imagen -->
-            <Image x:Name="escudoImage" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <Image x:Name="escudoImage" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
         </WrapPanel>
     </Border>
 </UserControl>

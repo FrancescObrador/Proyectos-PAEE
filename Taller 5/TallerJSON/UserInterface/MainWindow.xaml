@@ -16,10 +16,9 @@
                 <Button x:Name="exportarXMLButton" Content="📄 Exportar a XML" Padding="5" Margin="5" Click="exportarXMLButton_Click" IsEnabled="False"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Label Content="🔍 Buscar:" Margin="0,5,5,0" FontWeight="Bold"/>
-                <TextBox x:Name="searchBox" Width="100" Height="25" VerticalAlignment="Top" 
-                         Margin="0,4,0,0" TextWrapping="Wrap" Text="" TextChanged="searchBox_TextChanged" />
+                <TextBox x:Name="searchBox" Width="100" Height="25" Margin="0,4,0,0" TextWrapping="Wrap" Text="" TextChanged="searchBox_TextChanged" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
