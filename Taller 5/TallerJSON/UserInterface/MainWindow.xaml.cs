@@ -1,7 +1,10 @@
 ﻿using DataAccess;
 using ExportPDF;
 using Microsoft.Win32;
+using MigraDoc.DocumentObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,21 +26,29 @@ namespace UserInterface
 
         private ProvinciasJSON provinciasJSON;
         private List<Provincia> provincias;
+        private List<Provincia> listToShow = new List<Provincia>();
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        private int currentPage = 1;
+        private int pageSize = 5;
+        private int totalPages = 0;
 
         public MainWindow()
         {
             InitializeComponent();
+            btnPrevious.IsEnabled = false;
         }
 
         private void orderProvincias(bool porNombre)
         {
             if (porNombre)
             {
-                provincias = provincias.OrderBy(o => o.Nombre).ToList();
+                listToShow = provincias.OrderBy(o => o.Nombre).ToList();
             }
             else
             {
-                provincias = provincias.OrderBy(o => o.ID).ToList();
+                listToShow = provincias.OrderBy(o => o.ID).ToList();
             }
         }
 
@@ -45,7 +56,9 @@ namespace UserInterface
         {
             provinciasStackPanel.Children.Clear();
 
-            foreach(Provincia provincia in provincias)
+            var provinciasToShow = listToShow.Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
+
+            foreach (Provincia provincia in provinciasToShow)
             {
                 ProvinciaUserControl provinciaUserControl = new ProvinciaUserControl
                 {
@@ -54,13 +67,15 @@ namespace UserInterface
 
                 provinciasStackPanel.Children.Add(provinciaUserControl);
             }
+            
+            
         }
 
         private void activarBotones(bool activar) 
         {
             foreach(Button b in botonesStackPanel.Children)
             {
-                if(b.Name != "cargarButton")
+                if (b.Name != "cargarButton")
                 {
                     b.IsEnabled = activar;
                 }
@@ -105,7 +120,7 @@ namespace UserInterface
                 ProvinciasPDF provinciasPDF = new ProvinciasPDF();
                 if(provinciasPDF.SavePDF(provincias, saveFileDialog.FileName))
                 {
-                    if(MessageBox.Show("Datos exportados a PDF en " + saveFileDialog.FileName + "<\n\n ¿Deseas abrirlo)",
+                    if(MessageBox.Show("Datos exportados a PDF en " + saveFileDialog.FileName + "\n\n ¿Deseas abrirlo?",
                         "Exportación correcta", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
                     {
                         var p = new Process();
@@ -131,6 +146,9 @@ namespace UserInterface
                 if(provincias != null)
                 {
                     // carga de provincias
+                    listToShow = provincias;
+                    totalPages = (int)Math.Ceiling((decimal)(provincias.Count/(float)pageSize));
+                    lblPage.Content = $"1/{totalPages}";
                     showProvincias();
                     activarBotones(true);
                     statusText.Text = openFileDialog.FileName;
@@ -143,7 +161,6 @@ namespace UserInterface
                     MessageBox.Show("Error cargando datos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     statusText.Text = "Error cargando datos";
                 }
-
             }
         }
 
@@ -201,6 +218,89 @@ namespace UserInterface
                     e.Cancel = true;
                     break;
             }
+        }
+
+        private void searchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (provincias == null)
+            {
+                return;
+            }
+
+            // Si no hay nada en el buscador se muestran todas la provincias
+            if (String.IsNullOrWhiteSpace(searchBox.Text))
+            {
+                listToShow = provincias;
+                currentPage = 1;
+                totalPages = (int)Math.Ceiling((decimal)(provincias.Count / (float)pageSize));
+                ChangePage();
+                return;
+            }
+
+            listToShow = provincias.Where(provincia =>
+            {
+                /*
+                 * filtrado por contenido del termino en el nombre de provincia
+                 * para que el usuario pueda buscar Alicante por "Ali" o "ali"
+                 * o para que pueda buscar Ciudad Real por "Real" o "real"
+                 */
+                //return provincia.Nombre.ToLower().Contains(searchBox.Text.ToLower());
+
+                // Filtrado solo si empieza por el termino introducido
+                return provincia.Nombre.ToLower().StartsWith(searchBox.Text.ToLower());
+            }).ToList();
+
+            currentPage = 1;
+            totalPages = (int)Math.Ceiling(listToShow.Count / (double)pageSize);
+            ChangePage();
+        }
+
+        private void btnPrevious_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                ChangePage();
+            }
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentPage < totalPages)
+            {
+                currentPage++;
+                ChangePage();
+            } 
+        }
+
+        private void ChangePage()
+        {
+            btnPrevious.IsEnabled = currentPage > 1;
+            btnNext.IsEnabled = currentPage < totalPages;
+
+            lblPage.Content = $"{currentPage}/{totalPages}";
+
+            showProvincias();
+        }
+
+        /// Visto como hacerlo en: https://stackoverflow.com/questions/22598587/export-list-of-object-to-xml-file-in-c-sharp
+        private void exportXML()
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivo XML|*.xml";
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                FileInfo file = new FileInfo(saveFileDialog.FileName);
+                StreamWriter sw = file.AppendText();
+                var xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(List<Provincia>));
+                xmlSerializer.Serialize(sw, provincias);
+                sw.Close();
+            }
+        }
+
+        private void exportarXMLButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.exportXML();
         }
     }
 }
