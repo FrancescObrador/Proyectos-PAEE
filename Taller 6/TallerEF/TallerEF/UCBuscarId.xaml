@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="TallerEF.UCBuscarId"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TallerEF"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="clienteViewSource" />
+        <CollectionViewSource x:Key="cuentasClienteViewSource" 
+                              Source="{Binding Cuentas, Source={StaticResource Cliente}}"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Buscar por Id:" Grid.Row="0"/>
+        <TextBox Name="searchBar" TextChanged="TextBox_TextChanged" Grid.Row="0" Margin="100,0,0,0"/>
+        <Label Grid.Row="1" Margin="7,0" Content="Clientes:"/>
+        <DataGrid x:Name="clienteDataGrid" Grid.Row="2" 
+                  ItemsSource="{Binding Source={StaticResource cliente}}" 
+                  Margin="10" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="SizeToHeader"/>
+                <DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Identificacion}" Header="Identificacion" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Separator Grid.Row="3"/>
+        <Label Grid.Row="4" Margin="7,0" Content="Cuentas:"/>
+        <DataGrid x:Name="cuentasDataGrid" Grid.Row="5" 
+                  ItemsSource="{Binding Source={StaticResource cuentasClienteViewSource}}" 
+                  Margin="10" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="SizeToHeader"/>
+                <DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Saldo, ConverterCulture='es-ES',StringFormat=C}" Header="Saldo" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Cliente.Id}" Header="Cliente" Width="SizeToHeader"/>
+                <DataGridTextColumn Binding="{Binding Descripcion}" Header="Descripción" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
