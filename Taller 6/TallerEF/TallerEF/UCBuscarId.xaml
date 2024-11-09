@@ -9,7 +9,7 @@
     <UserControl.Resources>
         <CollectionViewSource x:Key="clienteViewSource" />
         <CollectionViewSource x:Key="cuentasClienteViewSource" 
-                              Source="{Binding Cuentas, Source={StaticResource Cliente}}"/>
+                              Source="{Binding Cuentas, Source={StaticResource clienteViewSource}}"/>
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -20,11 +20,11 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Content="Buscar por Id:" Grid.Row="0"/>
-        <TextBox Name="searchBar" TextChanged="TextBox_TextChanged" Grid.Row="0" Margin="100,0,0,0"/>
+        <Label Grid.Row="0">Buscar: </Label>
+        <TextBox x:Name="searchBar" Grid.Row="0" Margin="50,0,0,0" TextChanged="TextBox_TextChanged"/>
         <Label Grid.Row="1" Margin="7,0" Content="Clientes:"/>
         <DataGrid x:Name="clienteDataGrid" Grid.Row="2" 
-                  ItemsSource="{Binding Source={StaticResource cliente}}" 
+                  ItemsSource="{Binding Source={StaticResource clienteViewSource}}" 
                   Margin="10" IsReadOnly="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="SizeToHeader"/>
@@ -47,3 +47,6 @@
         </DataGrid>
     </Grid>
 </UserControl>
+
+    
+    

@@ -31,5 +31,11 @@
         <TabItem Header="Buscar ID">
             <local:UCBuscarId></local:UCBuscarId>
         </TabItem>
+        <TabItem Header="Buscar por Saldo">
+            <local:UCBuscarSaldo></local:UCBuscarSaldo>
+        </TabItem>
+        <TabItem Header="Perfil">
+            <local:UCProfile></local:UCProfile>
+        </TabItem>
     </TabControl>
 </Window>

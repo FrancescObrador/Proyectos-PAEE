@@ -14,18 +14,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace TallerEF
 {
     /// <summary>
-    /// Interaction logic for UCBuscarId.xaml
+    /// Interaction logic for UCBuscarSaldo.xaml
     /// </summary>
-    public partial class UCBuscarId : UserControl
+    public partial class UCBuscarSaldo : UserControl
     {
         private TallerEFContext _context = new TallerEFContext();
         private CollectionViewSource clienteViewSource;
 
-        public UCBuscarId()
+        public UCBuscarSaldo()
         {
             InitializeComponent();
             clienteViewSource = (CollectionViewSource)FindResource(nameof(clienteViewSource));
@@ -34,20 +33,21 @@ namespace TallerEF
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _context = new TallerEFContext();
-            _context.Cliente.Load();
+            _context.CuentaCliente.Load();
             clienteViewSource.Source = _context.Cliente.Local.ToObservableCollection();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (String.IsNullOrWhiteSpace(searchBar.Text)) return;
-            if (!int.TryParse(searchBar.Text, out _))
+            if (!decimal.TryParse(searchBar.Text, out _))
             {
                 searchBar.Text = string.Empty;
                 return;
             }
 
-            clienteViewSource.Source = _context.Cliente.Where( cliente => cliente.Id == Convert.ToInt32(searchBar.Text) ).ToList();
+            // Devuelvo un cliente si cualquiera de sus cuentas empieza con el saldo que se busca
+            clienteViewSource.Source = _context.Cliente.Where(cliente => cliente.Cuentas.Any(cuenta => cuenta.Saldo.ToString().StartsWith(searchBar.Text))).ToList();
         }
     }
 }
