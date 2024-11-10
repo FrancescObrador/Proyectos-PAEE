@@ -37,5 +37,8 @@
         <TabItem Header="Perfil">
             <local:UCProfile></local:UCProfile>
         </TabItem>
+        <TabItem Header="Todo en uno">
+            <local:UCTodoEnUno></local:UCTodoEnUno>
+        </TabItem>
     </TabControl>
 </Window>

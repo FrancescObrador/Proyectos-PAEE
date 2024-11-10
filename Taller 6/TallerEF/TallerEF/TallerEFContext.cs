@@ -13,6 +13,8 @@ namespace TallerEF
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TallerEF");
+            //optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=tallerEF;Username=usuario;Password=pwd1");
+
             optionsBuilder.UseLazyLoadingProxies();
         }
 
