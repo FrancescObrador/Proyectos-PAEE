@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TallerEF.Modelo;
 
 
 namespace TallerEF
@@ -23,19 +24,18 @@ namespace TallerEF
     public partial class UCBuscarId : UserControl
     {
         private TallerEFContext _context = new TallerEFContext();
-        private CollectionViewSource clienteViewSource;
+        private Cliente cliente = new Cliente();
+
 
         public UCBuscarId()
         {
             InitializeComponent();
-            clienteViewSource = (CollectionViewSource)FindResource(nameof(clienteViewSource));
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _context = new TallerEFContext();
             _context.Cliente.Load();
-            clienteViewSource.Source = _context.Cliente.Local.ToObservableCollection();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -47,7 +47,8 @@ namespace TallerEF
                 return;
             }
 
-            clienteViewSource.Source = _context.Cliente.Where( cliente => cliente.Id == Convert.ToInt32(searchBar.Text) ).ToList();
+            clienteGrid.DataContext = _context.Cliente.Where(cliente => cliente.Id == Convert.ToInt32(searchBar.Text)).SingleOrDefault();
+
         }
     }
 }
