@@ -122,8 +122,10 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\checkTaskEventArgs.cs" />
     <Compile Include="Models\cList.cs" />
     <Compile Include="Models\cTask.cs" />
+    <Compile Include="Models\deleteTaskEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TareaControl.xaml.cs">
       <DependentUpon>TareaControl.xaml</DependentUpon>
@@ -137,6 +139,7 @@
   <ItemGroup>
     <Content Include="Assets\layout\addList.png" />
     <Content Include="Assets\layout\addTask.png" />
+    <Content Include="Assets\layout\check.png" />
     <Content Include="Assets\layout\deleteList.png" />
     <Content Include="Assets\layout\deleteTask.png" />
     <Content Include="Properties\Default.rd.xml" />

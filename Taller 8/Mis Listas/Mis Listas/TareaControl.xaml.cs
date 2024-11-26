@@ -19,18 +19,45 @@ namespace Mis_Listas
 {
     public sealed partial class TareaControl : UserControl
     {
-        public TareaControl(string text = "")
+        public int list { get; set; }
+        public int task { get; set; }
+
+        public event EventHandler<deleteTaskEventArgs> deleteTask;
+        public event EventHandler<checkTaskEventArgs> checkTask;
+
+        public TareaControl(string text = "", int list = 0, int task = 0)
         {
             this.InitializeComponent();
             if(text != "")
             {
                 setText(text);
             }
+
+            this.list = list; 
+            this.task = task;
         }
 
         public void setText(string text)
         {
             lblTask.Text = text;
+        }
+
+        private void btnDeleteTask_Click(object sender, RoutedEventArgs e)
+        {
+            if (deleteTask != null)
+            {
+                deleteTaskEventArgs ea = new deleteTaskEventArgs(list, task);
+                deleteTask(sender, ea);
+            }
+        }
+
+        private void btnCheckTask_Click(object sender, RoutedEventArgs e)
+        {
+            if (checkTask != null)
+            {
+                checkTaskEventArgs ea = new checkTaskEventArgs(list, task);
+                checkTask(sender, ea);
+            }
         }
     }
 }

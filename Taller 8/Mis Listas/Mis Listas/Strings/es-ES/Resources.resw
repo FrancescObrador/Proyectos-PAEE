@@ -171,4 +171,19 @@
   <data name="txtSeguroBorrar" xml:space="preserve">
     <value>¿Estas seguro que deseas borrar la lista '{0}'?</value>
   </data>
+  <data name="errNuevaTarea" xml:space="preserve">
+    <value>Debe escribir una descripción</value>
+  </data>
+  <data name="lblNuevaTarea" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="tituloNuevaTarea" xml:space="preserve">
+    <value>Añadir una nueva tarea</value>
+  </data>
+  <data name="ttpNuevaTarea" xml:space="preserve">
+    <value>Dato obligatorio</value>
+  </data>
+  <data name="txtSeguroBorrarTarea" xml:space="preserve">
+    <value>¿Esta seguro que desea borrar la tarea '{0}'?</value>
+  </data>
 </root>

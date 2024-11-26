@@ -69,6 +69,7 @@ namespace Mis_Listas
             var res = await msgBox.ShowAsync();
             if(res == ContentDialogResult.Primary)
             {
+                saveData();
                 Windows.UI.Xaml.Application.Current.Exit();
             }
         }
@@ -95,13 +96,20 @@ namespace Mis_Listas
         {
             cList list = lists.ElementAt(indice);
             pnlList.Children.Clear();
-            if (list.tasks.Count > 0)
+            if (list.tasks.Count > 0 && list.tasks.Where(t => t.finished = false).Count() > 0)
             {
                 lblXdef.Visibility = Visibility.Collapsed;
+                int numTask = 0;
                 foreach (cTask task in list.tasks)
                 {
-                    TareaControl auxControl = new TareaControl(task.text);
-                    pnlList.Children.Add(auxControl);
+                    if (!task.finished)
+                    {
+                        TareaControl auxControl = new TareaControl(task.text, slctlist.SelectedIndex, numTask);
+                        auxControl.deleteTask += new EventHandler<deleteTaskEventArgs>(deleteTask);
+                        auxControl.checkTask += new EventHandler<checkTaskEventArgs>(checkTask);
+                        pnlList.Children.Add(auxControl);
+                        numTask++;
+                    }
                 }
             }
             else
@@ -185,7 +193,74 @@ namespace Mis_Listas
 
         private void btnNuevaTarea_Click(object sender, RoutedEventArgs e)
         {
+            tituloNuevaTarea.Text = textos.GetString("tituloNuevaTarea");
+            lblNuevaTarea.Text = textos.GetString("lblNuevaTarea");
+            txt_btnAdd_newTask.Text = textos.GetString("btnAdd");
+            txt_btnCancel_newTask.Text = textos.GetString("btnCancel");
 
+            txt_newTask_name.Text = "";
+            txt_newTask_name.PlaceholderText = textos.GetString("ttpNuevaTarea");
+            txt_newTask_name.PlaceholderForeground = new SolidColorBrush(Colors.LightGray);
+        }
+
+        private void btnAdd_newTask_Click(object sender, RoutedEventArgs e)
+        {
+            if(txt_newTask_name.Text != "")
+            {
+                flyAddTask.Hide();
+                cTask tarea = new cTask();
+                tarea.text = txt_newTask_name.Text;
+                tarea.date = DateTime.Now;
+                tarea.visible = true;
+                tarea.expired = null;
+                tarea.finished = false;
+                lists[slctlist.SelectedIndex].tasks.Add(tarea);
+                LoadTasks(slctlist.SelectedIndex);
+            }
+            else
+            {
+                txt_newTask_name.PlaceholderText = textos.GetString("errNuevaTarea");
+                txt_newTask_name.PlaceholderForeground = new SolidColorBrush(Colors.Red);
+            }
+        }
+
+        private void btnCancel_newTask_Click(object sender, RoutedEventArgs e)
+        {
+            flyAddTask.Hide();
+        }
+
+        async private void deleteTask(object sender, deleteTaskEventArgs e)
+        {
+            cTask tarea = lists.ElementAt(e.list).tasks.ElementAt(e.task);
+            ContentDialog msgBox = new ContentDialog
+            {
+                Title = textos.GetString("txtAtention"),
+                Content = String.Format(textos.GetString("txtSeguroBorrarTarea"), tarea.text),
+                PrimaryButtonText = textos.GetString("txtSi"),
+                CloseButtonText = textos.GetString("txtNo")
+            };
+
+            var res = await msgBox.ShowAsync();
+            if (res == ContentDialogResult.Primary)
+            {
+                lists.ElementAt(e.list).tasks.RemoveAt(e.task);
+                LoadTasks(e.list);
+            }
+        }
+
+        private void checkTask(object sender, checkTaskEventArgs e)
+        {
+            lists.ElementAt(e.list).tasks.ElementAt(e.task).finished = true;
+            LoadTasks(e.list);
+        }
+
+        async private void saveData()
+        {
+            StorageFolder appDir = ApplicationData.Current.LocalFolder;
+            StorageFile tmpFile = await appDir.CreateFileAsync("data.json", CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(tmpFile, JsonConvert.SerializeObject(lists));
+            StorageFolder dataDir = await Package.Current.InstalledLocation.GetFolderAsync(@"Assets\Data");
+            await tmpFile.MoveAsync(dataDir, "data.json", NameCollisionOption.ReplaceExisting);
         }
     }
 }
