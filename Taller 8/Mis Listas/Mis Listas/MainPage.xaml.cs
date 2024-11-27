@@ -23,6 +23,7 @@ using Windows.Storage;
 using Windows.ApplicationModel;
 using Newtonsoft.Json;
 using Windows.UI;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -76,12 +77,25 @@ namespace Mis_Listas
 
         async private void loadData()
         {
-            StorageFolder dataDir = await Package.Current.InstalledLocation.GetFolderAsync(@"Assets\Data");
-            StorageFile dataFile = await dataDir.GetFileAsync("data.json");
-            string cadena = await Windows.Storage.FileIO.ReadTextAsync(dataFile);
-            lists = JsonConvert.DeserializeObject<List<cList>>(cadena);
+            try
+            {
+                StorageFolder dataDir = await Package.Current.InstalledLocation.GetFolderAsync(@"Assets\Data");
+                StorageFile dataFile = await dataDir.GetFileAsync("data.json");
+                string cadena = await FileIO.ReadTextAsync(dataFile);
+                
+                lists = JsonConvert.DeserializeObject<List<cList>>(cadena);
+            }
+            catch (Exception ex)
+            {
+                var messageDialog = new MessageDialog("No se pudo cargar los datos. Por favor, verifica que el archivo exista y sea válido.");
+                await messageDialog.ShowAsync();
 
-            if(lists.Count >= 1)
+                lists = new List<cList>();
+                lists.Add(new cList());
+                lists[0].name = "Default list";
+            }
+
+            if (lists.Count >= 1)
             {
                 slctlist.Items.Clear();
                 slctlist.ItemsSource = lists;
@@ -96,7 +110,7 @@ namespace Mis_Listas
         {
             cList list = lists.ElementAt(indice);
             pnlList.Children.Clear();
-            if (list.tasks.Count > 0 && list.tasks.Where(t => t.finished = false).Count() > 0)
+            if (list.tasks.Count > 0 && list.tasks.Where(t => t.finished == false).Count() > 0)
             {
                 lblXdef.Visibility = Visibility.Collapsed;
                 int numTask = 0;
@@ -205,22 +219,30 @@ namespace Mis_Listas
 
         private void btnAdd_newTask_Click(object sender, RoutedEventArgs e)
         {
-            if(txt_newTask_name.Text != "")
+            try
             {
-                flyAddTask.Hide();
-                cTask tarea = new cTask();
-                tarea.text = txt_newTask_name.Text;
-                tarea.date = DateTime.Now;
-                tarea.visible = true;
-                tarea.expired = null;
-                tarea.finished = false;
-                lists[slctlist.SelectedIndex].tasks.Add(tarea);
-                LoadTasks(slctlist.SelectedIndex);
+                if (txt_newTask_name.Text != "")
+                {
+                    flyAddTask.Hide();
+                    cTask tarea = new cTask();
+                    tarea.text = txt_newTask_name.Text;
+                    tarea.date = DateTime.Now;
+                    tarea.visible = true;
+                    tarea.expired = null;
+                    tarea.finished = false;
+                    lists[slctlist.SelectedIndex].tasks.Add(tarea);
+                    LoadTasks(slctlist.SelectedIndex);
+                }
+                else
+                {
+                    txt_newTask_name.PlaceholderText = textos.GetString("errNuevaTarea");
+                    txt_newTask_name.PlaceholderForeground = new SolidColorBrush(Colors.Red);
+                }
             }
-            else
+            catch (IndexOutOfRangeException ex)
             {
-                txt_newTask_name.PlaceholderText = textos.GetString("errNuevaTarea");
-                txt_newTask_name.PlaceholderForeground = new SolidColorBrush(Colors.Red);
+                var messageDialog = new MessageDialog("No existe ninguna lista. No se puede agregar una tarea si no existe ninguna lista.");
+                messageDialog.ShowAsync();
             }
         }
 
@@ -256,11 +278,52 @@ namespace Mis_Listas
 
         async private void saveData()
         {
-            StorageFolder appDir = ApplicationData.Current.LocalFolder;
-            StorageFile tmpFile = await appDir.CreateFileAsync("data.json", CreationCollisionOption.ReplaceExisting);
-            await FileIO.WriteTextAsync(tmpFile, JsonConvert.SerializeObject(lists));
-            StorageFolder dataDir = await Package.Current.InstalledLocation.GetFolderAsync(@"Assets\Data");
-            await tmpFile.MoveAsync(dataDir, "data.json", NameCollisionOption.ReplaceExisting);
+            try
+            {
+                // Se guarda un backup
+                StorageFolder dataDir = await Package.Current.InstalledLocation.GetFolderAsync(@"Assets\Data");
+                StorageFile dataFile = await dataDir.GetFileAsync("data.json");
+                await dataFile.RenameAsync("data.json.old", NameCollisionOption.ReplaceExisting);
+
+                StorageFolder appDir = ApplicationData.Current.LocalFolder;
+                StorageFile tmpFile = await appDir.CreateFileAsync("data.json", CreationCollisionOption.ReplaceExisting);
+                await FileIO.WriteTextAsync(tmpFile, JsonConvert.SerializeObject(lists));
+
+                await tmpFile.MoveAsync(dataDir, "data.json", NameCollisionOption.ReplaceExisting);
+            }
+            catch (Exception ex)
+            {
+                var messageDialog = new MessageDialog("Ocurrió un error inesperado al guardar los datos.");
+                await messageDialog.ShowAsync();
+            }
+        }
+
+        private void btnOrdenarFecha_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                lists[slctlist.SelectedIndex].tasks = lists[slctlist.SelectedIndex].tasks.OrderBy(t => t.date).ToList();
+                LoadTasks(slctlist.SelectedIndex);
+            }
+            catch (Exception ex)
+            {
+                var messageDialog = new MessageDialog("Ocurrió un error inesperado al ordenar la lista");
+                messageDialog.ShowAsync();
+            }
+        }
+
+        private void btnOrdenarNombre_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                lists[slctlist.SelectedIndex].tasks = lists[slctlist.SelectedIndex].tasks.OrderBy(t => t.text).ToList();
+                LoadTasks(slctlist.SelectedIndex);
+            }
+            catch (Exception ex) 
+            {
+                var messageDialog = new MessageDialog("Ocurrió un error inesperado al ordenar la lista.");
+                messageDialog.ShowAsync();
+            }
         }
     }
 }
